@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust Trip Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <main class="container">
+        <header>
+            <h1>WanderLust</h1>
+            <p>Plan your perfect getaway in seconds.</p>
+        </header>
+
+        <div class="glass-panel">
+            <form id="trip-form">
+                <div class="form-group">
+                    <label for="destination">Where to?</label>
+                    <input type="text" id="destination" name="destination" placeholder="e.g., Paris, Tokyo, Bali" required>
+                </div>
+                
+                <div class="dates-group">
+                    <div class="form-group">
+                        <label for="start-date">Check-in</label>
+                        <input type="date" id="start-date" name="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">Check-out</label>
+                        <input type="date" id="end-date" name="end-date" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Generate Itinerary</button>
+            </form>
+        </div>
+
+        <div id="results-container" class="results-container hidden">
+            <h2>Suggested Activities in <span id="display-destination"></span></h2>
+            <p class="trip-dates" id="display-dates"></p>
+            <div class="activities-grid" id="activities-list">
+                <!-- Activities will be injected here via JS -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
